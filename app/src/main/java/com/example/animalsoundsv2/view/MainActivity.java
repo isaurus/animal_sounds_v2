@@ -24,17 +24,23 @@ public class MainActivity extends AppCompatActivity {
         initComponents();
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        sndController.stopMusic();
+    }
+
     public void initComponents(){
 
         ImageView imgBackground = findViewById(R.id.imgBackground);
         ImageView imgPlay = findViewById(R.id.imgPlay);
         imgController = new ImageController();
         sndController = new SoundController();
-        ctx = getApplicationContext();
+        ctx = this;
 
         imgController.setMainBackgroundImage(imgBackground);
-        //sndController.setMainBackgroundMusic(ctx);
-        sndController.setBackgroundMusic(ctx, "Main");
+        sndController.setBackgroundMusic(ctx, R.raw.background_music_main);
 
         imgPlay.setOnClickListener(v -> startActivity(imgController.getSecondActivityIntent(ctx)));
     }

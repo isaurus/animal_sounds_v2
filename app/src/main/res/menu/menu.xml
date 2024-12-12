@@ -7,7 +7,7 @@
         <menu>
             <item
                 android:title="@string/item_ocean"
-                android:id="@+id/domesticAnimal"/>
+                android:id="@+id/oceanAnimal"/>
             <item
                 android:title="@string/item_wild"
                 android:id="@+id/wildAnimal"/>

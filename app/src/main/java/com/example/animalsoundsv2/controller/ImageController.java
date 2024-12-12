@@ -30,7 +30,6 @@ public class ImageController {
 
     public Intent getSecondActivityIntent(Context ctx){
         Intent i = new Intent(ctx, SecondActivity.class);
-
         return i;
     }
 }
